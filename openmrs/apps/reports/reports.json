@@ -55,7 +55,7 @@
             "sqlPath": "/etc/bahmni_config/openmrs/apps/reports/sql/diagnosisCount.sql"
         }
     },
-    "formBuilderReport":{
+    "formBuilderReport": {
         "name": "SNOMED Form builder form Report",
         "type": "formBuilder",
         "requiredPrivilege": "app:reports",
@@ -75,7 +75,14 @@
             ],
             "showVisitInfo": true,
             "showProvider": true,
-            "formNamesToFilter": [ "Test Form", "SNOMED H&E Form", "SNOMED Malaria Form", "SNOMED Asthma Form", "SNOMED COVID Form", "SNOMED Accident Intake Form"],
+            "formNamesToFilter": [
+                "Test Form",
+                "SNOMED H&E Form",
+                "SNOMED Malaria Form",
+                "SNOMED Asthma Form",
+                "SNOMED COVID Form",
+                "SNOMED Accident Intake Form"
+            ],
             "conceptNameDisplayFormat": "shortNamePreferred",
             "locationTagsToFilter": [],
             "programsToFilter": [],
@@ -83,7 +90,7 @@
             "visitTypesToFilter": []
         }
     },
-    "covidIntakeLineList":{
+    "covidIntakeLineList": {
         "name": "SNOMED Covid Intake Line List",
         "type": "formBuilder",
         "requiredPrivilege": "app:reports",
@@ -99,7 +106,9 @@
             ],
             "showVisitInfo": false,
             "showProvider": false,
-            "formNamesToFilter": [ "SNOMED COVID Form" ],
+            "formNamesToFilter": [
+                "SNOMED COVID Form"
+            ],
             "conceptNameDisplayFormat": "shortNamePreferred",
             "locationTagsToFilter": [],
             "programsToFilter": [],
@@ -226,7 +235,9 @@
             ],
             "patientAddresses": [
             ],
-            "extensions": ["org.bahmni.reports.extensions.icd10.Icd10ResultSetExtension"]
+            "extensions": [
+                "org.bahmni.reports.extensions.icd10.Icd10ResultSetExtension"
+            ]
         }
     },
     "diagnosisICDLineReportPeritonitis": {
@@ -246,7 +257,9 @@
             "patientAddresses": [
                 "city_village"
             ],
-            "extensions": ["org.bahmni.reports.extensions.icd10.Icd10ResultSetExtension"]
+            "extensions": [
+                "org.bahmni.reports.extensions.icd10.Icd10ResultSetExtension"
+            ]
         }
     },
     "diagnosisICDLineReportPneumonia": {
@@ -263,7 +276,9 @@
             ],
             "patientAddresses": [
             ],
-            "extensions": ["org.bahmni.reports.extensions.icd10.Icd10ResultSetExtension"]
+            "extensions": [
+                "org.bahmni.reports.extensions.icd10.Icd10ResultSetExtension"
+            ]
         }
     },
     "diagnosisICDLineReportExcessiveGrowthRate": {
@@ -280,7 +295,9 @@
             ],
             "patientAddresses": [
             ],
-            "extensions": ["org.bahmni.reports.extensions.icd10.Icd10ResultSetExtension"]
+            "extensions": [
+                "org.bahmni.reports.extensions.icd10.Icd10ResultSetExtension"
+            ]
         }
     },
     "diagnosisICDLineReportDietaryFinding": {
@@ -297,7 +314,9 @@
             ],
             "patientAddresses": [
             ],
-            "extensions": ["org.bahmni.reports.extensions.icd10.Icd10ResultSetExtension"]
+            "extensions": [
+                "org.bahmni.reports.extensions.icd10.Icd10ResultSetExtension"
+            ]
         }
     },
     "diagnosisICDLineReportCOVID19": {
@@ -314,6 +333,28 @@
             ],
             "patientAddresses": [
             ],
-            "extensions": ["org.bahmni.reports.extensions.icd10.Icd10ResultSetExtension"]
+            "extensions": [
+                "org.bahmni.reports.extensions.icd10.Icd10ResultSetExtension"
+            ]
+        }
+    },
+    "diagnosisICDLineReportClinicalFindings": {
+        "name": "SNOMED Diagnosis Line Report(ICD) for Clinical Findings",
+        "type": "fhirTSLookupDiagnosisLine",
+        "requiredPrivilege": "app:reports",
+        "config": {
+            "tsConceptSource": "SCT",
+            "conceptNameDisplayFormat": "shortNamePreferred",
+            "terminologyParentCode": "404684003",
+            "displayTerminologyCode": "true",
+            "terminologyColumnName": "SNOMED Code",
+            "patientAttributes": [
+            ],
+            "patientAddresses": [
+            ],
+            "extensions": [
+                "org.bahmni.reports.extensions.icd10.Icd10ResultSetExtension"
+            ]
         }
     }
+}
